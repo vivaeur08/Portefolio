@@ -1,0 +1,22 @@
+{
+    "name": "Sweet Crush",
+    "short_name": "Sweet Crush",
+    "description": "Un jeu puzzle match-3 familial et addictif !",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#FFF5F8",
+    "theme_color": "#FF6B9D",
+    "icons": [
+        {
+            "src": "icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
