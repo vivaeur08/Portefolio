@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Développeur Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mobile-menu { transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; max-height: 0; opacity: 0; overflow: hidden; }
+        .mobile-menu.open { max-height: 400px; opacity: 1; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-2 font-bold text-2xl text-indigo-600 cursor-pointer">
+                <i data-lucide="code-2" class="w-8 h-8"></i>
+                <span>DevPortfolio</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Accueil</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">À propos</a>
+                <a href="#skills" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Compétences</a>
+                <a href="#projects" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Projets</a>
+                <a href="#contact" class="px-5 py-2.5 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition-colors">Embauchez-moi</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-gray-700">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-100">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="#home" class="text-lg font-medium text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="#about" class="text-lg font-medium text-gray-700 hover:text-indigo-600">À propos</a>
+                <a href="#skills" class="text-lg font-medium text-gray-700 hover:text-indigo-600">Compétences</a>
+                <a href="#projects" class="text-lg font-medium text-gray-700 hover:text-indigo-600">Projets</a>
+                <a href="#contact" class="text-lg font-medium text-indigo-600 font-bold">Embauchez-moi</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" class="space-y-6">
+                <div class="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full font-medium text-sm">
+                    Développeur Web Fullstack
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                    Je transforme vos idées en <span class="text-indigo-600">réalité digitale</span>
+                </h1>
+                <p class="text-lg text-gray-600 md:pr-12">
+                    Passionné par la création d'expériences web modernes, performantes et intuitives.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#projects" class="px-8 py-3.5 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center gap-2 shadow-lg shadow-indigo-200">
+                        Voir mes projets <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-3.5 bg-white text-gray-700 border border-gray-200 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            
+            <div data-aos="zoom-in" class="relative hidden md:block">
+                <div class="relative z-10 w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-indigo-200 to-purple-200 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-indigo-600/10 backdrop-blur-sm m-4 rounded-xl border border-white/20"></div>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coding Workspace" class="object-cover w-full h-full opacity-90">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">À propos de moi</h2>
+                <div class="w-20 h-1.5 bg-indigo-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Developer" class="rounded-2xl shadow-2xl w-full object-cover h-[400px]">
+                </div>
+                <div data-aos="fade-left" class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-900">Développeur créatif & passionné</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Bonjour ! Je suis un développeur web passionné avec une solide expérience dans la création d'applications web modernes. J'aime résoudre des problèmes complexes et transformer des designs en code propre et performant.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Mon objectif est de créer des interfaces utilisateur intuitives et des expériences numériques mémorables.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg"><i data-lucide="user" class="w-5 h-5"></i></div>
+                            <div><p class="text-sm text-gray-500">Expérience</p><p class="font-semibold text-gray-900">3+ Ans</p></div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                            <div><p class="text-sm text-gray-500">Localisation</p><p class="font-semibold text-gray-900">France</p></div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg"><i data-lucide="globe" class="w-5 h-5"></i></div>
+                            <div><p class="text-sm text-gray-500">Langues</p><p class="font-semibold text-gray-900">Français, Anglais</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mes Compétences Techniques</h2>
+                <div class="w-20 h-1.5 bg-indigo-600 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Stack moderne et performante.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div data-aos="fade-up" data-aos-delay="0" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4 inline-block p-3 bg-gray-50 rounded-xl"><i data-lucide="layout" class="w-8 h-8 text-blue-500"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Propose</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Serveur discord</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Portfolio</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Site personaliser</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Script roblox</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4 inline-block p-3 bg-gray-50 rounded-xl"><i data-lucide="database" class="w-8 h-8 text-green-500"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Codage</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Python</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>html css java script</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>LUA</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4 inline-block p-3 bg-gray-50 rounded-xl"><i data-lucide="smartphone" class="w-8 h-8 text-purple-500"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Mobile</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span> jeu basic</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Candy crush</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Geometric shooter</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4 inline-block p-3 bg-gray-50 rounded-xl"><i data-lucide="terminal" class="w-8 h-8 text-orange-500"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Dev</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>utilise Github</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mes Projets Récents</h2>
+                    <div class="w-20 h-1.5 bg-indigo-600 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div data-aos="fade-up" class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://www.tradingsat.com/media/pictures/realsize/news/premiere-seance-de-cotation-spectaculaire-pour-le-titre-roblox-660425.jpg" alt="Project 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600">Dev Roblox</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">J'ai développer un jeu de voleur, un peu comme R.E.P.O</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="candyrush.png" alt="Project 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="flex gap-2">
+                                <a href="https://candyrush.websr.gg/" class="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/40 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600">IOS candyrush App</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Jeu complet, un candy crush pour le fun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Me Contacter</h2>
+                <div class="w-20 h-1.5 bg-indigo-600 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Un projet en tête ? Discutons-en.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div data-aos="fade-right" class="space-y-8">
+                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="p-3 bg-indigo-100 text-indigo-600 rounded-full"><i data-lucide="mail" class="w-6 h-6"></i></div>
+                        <div><h3 class="font-bold text-gray-900 text-lg mb-1">Email</h3><p class="text-gray-600">vivaeur.dev@gmail.com</p></div>
+                    </div>
+                    
+                </div>
+                <div class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="p-3 bg-indigo-100 text-indigo-600 rounded-full"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                        <div><h3 class="font-bold text-gray-900 text-lg mb-1">Discord</h3><p class="text-gray-600">adam.viv</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">DevPortfolio</h3>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        AOS.init({
+            once: true,
+            duration: 800,
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const icon = mobileMenu.classList.contains('open') ? 'x' : 'menu';
+            menuBtn.innerHTML = `<i data-lucide="${icon}" class="w-7 h-7"></i>`;
+            lucide.createIcons();
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-md', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-md', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                menuBtn.innerHTML = `<i data-lucide="menu" class="w-7 h-7"></i>`;
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
