@@ -19,7 +19,7 @@
         .mobile-menu.open { max-height: 500px; 
             
         .swiper-button-next, .swiper-button-prev {
-            color: #4f46e5 !important; /* Couleur Indigo Tailwind */
+            color: #4f46e5 !important;
             background-color: white;
             padding: 24px;
             border-radius: 50%;
@@ -329,16 +329,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // Initialisation des icônes
         lucide.createIcons();
         
-        // Initialisation des animations au scroll
         AOS.init({
             once: true,
             duration: 800,
         });
 
-        // Initialisation du Slider (Swiper) pour les modélisations
         const swiper = new Swiper(".modelisationSwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -356,14 +353,12 @@
                 prevEl: ".swiper-button-prev",
             },
             breakpoints: {
-                // Affiche 2 éléments sur tablette et plus
                 768: {
                     slidesPerView: 2,
                 }
             }
         });
 
-        // Gestion du menu mobile
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -374,7 +369,6 @@
             lucide.createIcons();
         });
 
-        // Changement de la navbar au scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -386,7 +380,6 @@
             }
         });
 
-        // Fermer le menu mobile au clic sur un lien
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
@@ -396,4 +389,5 @@
         });
     </script>
 </body>
+
 </html>
